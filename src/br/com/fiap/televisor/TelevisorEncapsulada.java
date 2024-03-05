@@ -27,10 +27,10 @@ public class TelevisorEncapsulada {
 
 	public void setCanal(int canal) {
 		try {
-			if (canal == 2 || canal == 4 || canal == 5 || canal == 7 || canal == 13) {
+			if ((canal == 2) || (canal == 4) || (canal == 5) || (canal == 7) || (canal == 13)) {
 				this.canal = canal;
 			} else {
-				throw new Exception();
+				throw new Exception("Canal fora da faixa permitida (2, 4, 5, 7 e 13)");
 			}
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
